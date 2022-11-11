@@ -33,10 +33,19 @@ p disemvowel(str)
 # There will always be at least one number in the input string.
 # Output string must be two numbers separated by a single space, and highest number is first.
 
-def high_and_low(str)
-  arr = (str.split(" ").collect {|str| str.to_i})
-  return "#{arr.max} #{arr.min}"
+# def high_and_low(str)
+#   arr = (str.split(" ").collect {|str| str.to_i})
+#   return "#{arr.max} #{arr.min}"
+# end
+
+
+#refactor 
+
+def high_and_low(numbers)
+  numbers.split(" ").map(&:to_i).minmax.reverse
 end
 
-str = ("8 3 -5 42 -1 0 0 -9 4 7 4 -4")
-p high_and_low(str)
+
+arr = ("8 3 -5 42 -1 0 0 -9 4 7 4 -4")
+p high_and_low(arr)
+
