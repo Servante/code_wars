@@ -49,3 +49,34 @@ end
 arr = ("8 3 -5 42 -1 0 0 -9 4 7 4 -4")
 p high_and_low(arr)
 
+
+
+
+
+
+
+# 7th kyu - Square Every Digit
+
+# Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+# For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+# Note: The function accepts an integer and returns an integer
+
+
+# def square_digits(num)
+#   (num.to_s.split("").collect {|e| (e.to_i) * (e.to_i)}).join("").to_i
+# end
+
+
+#refactor
+
+def square_digits(num)
+  (num.to_s.split("").collect {|e| e.to_i**2}).join("").to_i
+end
+
+input = 1234321
+p square_digits(input)
+
+
+
