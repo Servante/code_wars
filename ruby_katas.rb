@@ -20,6 +20,7 @@ str = "This website is for losers LOL!"
 p disemvowel(str)
 
 
+
 #7 kyu - Highest and Lowest
 
 # In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
@@ -51,10 +52,6 @@ p high_and_low(arr)
 
 
 
-
-
-
-
 # 7th kyu - Square Every Digit
 
 # Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
@@ -80,3 +77,20 @@ p square_digits(input)
 
 
 
+# 7th kyu Descending Order
+
+# Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+# Examples:
+# Input: 42145 Output: 54421
+
+# Input: 145263 Output: 654321
+
+# Input: 123456789 Output: 987654321
+
+
+def descending_order(n)
+  n.digits.sort.reverse.join.to_i
+end
+
+p num = 123456789
